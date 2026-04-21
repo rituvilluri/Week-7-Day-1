@@ -94,7 +94,7 @@ export default class App extends Component {
             size={[sizeWidth, sizeHeight]}
             separation={(a, b) => (a.parent == b.parent ? 1 : 0.5) / a.depth}
           >
-            {({ data }) => (
+            {(data) => (
               <Group top={origin.y} left={origin.x}>
                 <Links
                   links={data.links()}
@@ -109,7 +109,7 @@ export default class App extends Component {
                   layout={layout}
                   orientation={orientation}
                   onNodeClick={node => {
-                    if (!node.data.isExpanded) {
+                    if (node.data.isExpanded) {
                       node.data.x0 = node.x;
                       node.data.y0 = node.y;
                     }

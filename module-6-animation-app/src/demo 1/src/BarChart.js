@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NodeGroup from "react-move/NodeGroup";
+import { NodeGroup } from "react-move";
 import {
   getInitialData,
   getAppendedData,
